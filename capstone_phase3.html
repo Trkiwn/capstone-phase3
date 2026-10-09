@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 3 Capstone Exam — Pre-IELTS to 5.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./capstone_phase3.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header id="exam-header">
+  <div class="hdr-left" id="hdr-title">Phase 3 Capstone</div>
+  <div class="hdr-center"><div id="timer" aria-hidden="true">--:--</div><div id="timer-label"></div></div>
+  <div class="hdr-right"><div id="progress-rail" aria-label="Exam progress"></div></div>
+</header>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<main id="main-content">
+
+  <!-- COVER -->
+  <section id="screen-cover" class="screen active">
+    <div class="card">
+      <div class="eyebrow">Phase 3 Capstone Checkpoint</div>
+      <h1>Strategy Expansion &amp; Essay Assembly<br>Exam</h1>
+      <p class="lead">A real IELTS-style assessment of everything from Phase 3: Listening (Sections 1–4), Reading, and Writing (Task 1 and Task 2). It shows you and your teacher what is already strong and what to repair in Phase 4. <b>It is a checkpoint, not a judgement</b> — do your best and answer every question.</p>
+      <div class="chips" id="cover-chips"></div>
+    </div>
+
+    <div class="card hidden" id="cover-resume">
+      <h2>Saved attempt found</h2>
+      <p id="cover-resume-text" class="lead"></p>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-resume">Resume where I stopped</button>
+        <button class="btn btn-ghost" id="btn-discard">Start a new attempt (erases saved answers)</button>
+      </div>
+      <div class="note clay">The timer kept running while the page was closed. If time ran out, that section was closed automatically.</div>
+    </div>
+
+    <div class="card" id="cover-form">
+      <h2>Before you begin</h2>
+      <ul class="rules">
+        <li>The exam has <b>three sections in order</b>. Each section has its own timer. When a timer ends, the exam moves on automatically, and you <b>cannot go back</b> to an earlier section.</li>
+        <li>Inside a section you may move freely between passages or tasks.</li>
+        <li>Your answers <b>save automatically</b>. If the page closes or refreshes, reopen this same file in the same browser and choose “Resume”.</li>
+        <li>Closed book: no dictionary, translator, AI tool or phone. You may use blank paper and a pen for notes.</li>
+        <li>Copying and pasting are switched off. Please type your own answers.</li>
+        <li>Listening uses an audio cue. You can preview the placeholder audio file below before starting.</li>
+        <li>At the end you will download your answer sheet and upload it to Google Classroom.</li>
+      </ul>
+      <label class="fld" for="inp-name">Full name</label>
+      <input type="text" id="inp-name" autocomplete="off" placeholder="Your name">
+      <label class="fld" for="inp-date">Date</label>
+      <input type="date" id="inp-date" autocomplete="off">
+      <div class="fld">Listening audio preview <span class="small">(sample file from ./Audio)</span></div>
+      <audio controls style="margin-top:4px;width:100%" src="./Audio/listening-placeholder.wav" aria-label="Listening audio preview"></audio>
+      <label class="chk"><input type="checkbox" id="chk-integrity"><span>I will complete this exam on my own, without notes, dictionaries, translators or AI tools, and I will not copy or share the exam content.</span></label>
+      <div class="note teal" id="storage-warn" style="display:none"></div>
+      <div class="btn-row"><button class="btn btn-primary" id="btn-begin" disabled>Begin the exam →</button></div>
+    </div>
+  </section>
+
+  <!-- INTRO SCREENS (filled by JS) -->
+  <section id="screen-intro-reading" class="screen"></section>
+  <section id="screen-intro-writing" class="screen"></section>
+  <section id="screen-intro-listening" class="screen"></section>
+
+  <!-- READING -->
+  <section id="screen-run-reading" class="screen">
+    <div class="run-top">
+      <div class="tabs" id="reading-tabs" role="tablist"></div>
+      <button class="btn btn-amber" id="btn-finish-reading">Finish Reading →</button>
+    </div>
+    <div id="reading-panes"></div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="screen-run-writing" class="screen">
+    <div class="run-top">
+      <div class="tabs" id="writing-tabs" role="tablist"></div>
+      <button class="btn btn-amber" id="btn-finish-writing">Finish Writing →</button>
+    </div>
+    <div id="writing-panes"></div>
+  </section>
+
+  <!-- LISTENING -->
+  <section id="screen-run-listening" class="screen"></section>
+
+  <!-- DONE -->
+  <section id="screen-done" class="screen"><div id="done-root"></div></section>
+</main>
+
+<!-- Reading question palette -->
+<div id="palette-bar" role="navigation" aria-label="Question navigator">
+  <div class="pal-inner"><div class="pal-nums" id="pal-nums"></div><div class="pal-count" id="pal-count"></div></div>
+</div>
+
+<div id="print-sheet"></div>
+
+<script src="./capstone_phase3_content.js"></script>
+<script src="./capstone_phase3.js"></script>
+</body>
+</html>x`

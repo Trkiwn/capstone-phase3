@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <rect width="800" height="340" fill="#F4F6F9"/>
+  <rect x="30" y="30" width="740" height="280" rx="18" fill="#FFFFFF" stroke="#D5DDE6" stroke-width="2"/>
+  <path d="M80 220 C150 110, 220 90, 290 220 S430 330, 500 190 S640 90, 720 210" fill="none" stroke="#2D8A6E" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="290" cy="220" r="10" fill="#F6AE2D"/>
+  <circle cx="500" cy="190" r="10" fill="#F6AE2D"/>
+  <text x="400" y="70" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#1A3A5C" font-weight="700">Diagram Placeholder</text>
+  <text x="400" y="102" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#4A5568">Add your final IELTS diagram later in ./Diagrams</text>
+</svg>
